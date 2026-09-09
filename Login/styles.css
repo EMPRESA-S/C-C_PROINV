@@ -6,7 +6,9 @@ body.login-body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .login-card {
     background: #151515;
@@ -16,6 +18,7 @@ body.login-body {
     max-width: 380px;
     border: 1px solid #333;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-sizing: border-box;
 }
 .login-card h2 {
     margin-top: 0;
@@ -36,12 +39,13 @@ body.login-body {
 }
 .form-group input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border-radius: 6px;
     border: 1px solid #444;
     background: #222;
     color: #fff;
     box-sizing: border-box;
+    font-size: 16px;
 }
 .btn-login {
     width: 100%;
@@ -53,6 +57,7 @@ body.login-body {
     font-weight: bold;
     cursor: pointer;
     text-transform: uppercase;
+    font-size: 15px;
 }
 .btn-login:hover {
     background: #e21b1b;
@@ -68,9 +73,15 @@ body.login-body {
     text-align: center;
     margin-top: 15px;
     color: #888;
-    font-size: 12px;
+    font-size: 13px;
     text-decoration: none;
 }
 .back-link:hover {
     color: #fff;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 20px;
+    }
 }
