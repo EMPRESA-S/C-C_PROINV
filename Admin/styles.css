@@ -13,6 +13,7 @@ body {
     background: #111;
     color: #fff;
     padding: 20px;
+    flex-shrink: 0;
 }
 .sidebar h2 {
     font-size: 18px;
@@ -41,6 +42,8 @@ body {
 .admin-content {
     flex: 1;
     padding: 30px;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 .admin-header {
     display: flex;
@@ -61,6 +64,7 @@ body {
     border-radius: 6px;
     text-decoration: none;
     font-size: 13px;
+    white-space: nowrap;
 }
 .image-grid {
     display: grid;
@@ -110,4 +114,35 @@ body {
     margin-top: 10px;
     color: #25d366;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .admin-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .sidebar li a {
+        margin-bottom: 0;
+        padding: 8px 12px;
+    }
+    .admin-content {
+        padding: 15px;
+    }
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
 }
