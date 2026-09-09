@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel de Administración | C&L PROINV</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="admin-layout">
+    <aside class="sidebar">
+        <h2>Panel Admin</h2>
+        <ul>
+            <li><a href="#imagenes" class="active">Reemplazar Imágenes</a></li>
+            <li><a href="#" id="btnLogout">Cerrar Sesión</a></li>
+        </ul>
+    </aside>
+    <main class="admin-content">
+        <header class="admin-header">
+            <h1>Gestión de Imágenes del Sitio</h1>
+            <a href="../index.html" target="_blank" class="btn-view-site">Ver Sitio Web ↗</a>
+        </header>
+        
+        <section class="admin-section">
+            <p>Sube o reemplaza las imágenes de la página principal. Selecciona una nueva imagen para cada sección:</p>
+            
+            <div class="image-grid">
+                <div class="image-card">
+                    <h3>Logo Principal</h3>
+                    <img id="prev-logo" src="../assets/logo-cylproinv.png" class="preview-thumb">
+                    <input type="file" data-key="logo" class="img-input" accept="image/*">
+                </div>
+                <div class="image-card">
+                    <h3>Imagen Hero (Ingenieros)</h3>
+                    <img id="prev-hero-ingenieros" src="../assets/hero-ingenieros.png" class="preview-thumb">
+                    <input type="file" data-key="hero-ingenieros" class="img-input" accept="image/*">
+                </div>
+                <div class="image-card">
+                    <h3>Topografía en Obra</h3>
+                    <img id="prev-obra-topografia" src="../assets/obra-topografia.jpg" class="preview-thumb">
+                    <input type="file" data-key="obra-topografia" class="img-input" accept="image/*">
+                </div>
+                <div class="image-card">
+                    <h3>Control de Costos</h3>
+                    <img id="prev-control-costos" src="../assets/control-costos.jpg" class="preview-thumb">
+                    <input type="file" data-key="control-costos" class="img-input" accept="image/*">
+                </div>
+                <div class="image-card">
+                    <h3>Seguridad en Obra</h3>
+                    <img id="prev-seguridad-obra" src="../assets/seguridad-obra.jpg" class="preview-thumb">
+                    <input type="file" data-key="seguridad-obra" class="img-input" accept="image/*">
+                </div>
+                <div class="image-card">
+                    <h3>Equipo Reunión</h3>
+                    <img id="prev-equipo-reunion" src="../assets/equipo-reunion.jpg" class="preview-thumb">
+                    <input type="file" data-key="equipo-reunion" class="img-input" accept="image/*">
+                </div>
+                <div class="image-card">
+                    <h3>Construcción</h3>
+                    <img id="prev-obra-construccion" src="../assets/obra-construccion.jpg" class="preview-thumb">
+                    <input type="file" data-key="obra-construccion" class="img-input" accept="image/*">
+                </div>
+            </div>
+            <button id="btnGuardar" class="btn-save">Guardar Cambios</button>
+            <p id="saveMsg" class="save-msg"></p>
+        </section>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
